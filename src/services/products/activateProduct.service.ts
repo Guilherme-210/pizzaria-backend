@@ -5,7 +5,7 @@ interface IActivateProductRequest {
 }
 
 class ActivateProductService {
-    async execute({ id }: IactivateProductRequest) {
+    async execute({ id }: IActivateProductRequest) {
         try {
             const product = await prismaClient.product.findUnique({
                 where: { id },
