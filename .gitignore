@@ -68,3 +68,11 @@ Thumbs.db
 # Generated (se aplicável)
 # =========================
 src/generated/
+
+# =========================
+# Test Folders
+# =========================
+/test/
+/test-*
+/test.*
+/test*

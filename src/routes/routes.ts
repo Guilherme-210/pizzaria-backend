@@ -3,6 +3,7 @@ import { Router } from 'express';
 import { createUserRoutes } from './users/createUser.route';
 import { authUserRoutes } from './users/authUser.route';
 import { detailUserRoutes } from './users/detailUser.route';
+import { updateUserRoleRoutes } from './users/updateUserRole.route';
 
 import { createCategoryRoutes } from './category/createCategory.route';
 import { deleteCategoryRoutes } from './category/deleteCategory.route';
@@ -27,7 +28,7 @@ routes.get('/', (_req, res) => {
 
 // Users
 routes.use('/user', detailUserRoutes)
-routes.use('/user', createUserRoutes, authUserRoutes)
+routes.use('/user', createUserRoutes, authUserRoutes, updateUserRoleRoutes)
 
 // Categories
 routes.use('/category', listCategoriesRoutes);

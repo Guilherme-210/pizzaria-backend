@@ -15,6 +15,13 @@ class UserSchemas {
             password: z.string({ message: 'Senha é obrigatória' })
         })
     });
+
+    updateRole = z.object({
+        body: z.object({
+            userId: z.string({ message: 'ID do usuário é obrigatório' }),
+            role: z.string({ message: 'Role é obrigatória' })
+        })
+    });
 }
 
 export const userSchemas = new UserSchemas();
